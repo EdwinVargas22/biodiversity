@@ -11,21 +11,53 @@ function init() {
        var otuID = ids.map(name => "OTU" + name);
        console.log(`OTU IDs: ${otuID}`);
 
-       var trace = {
+       var trace1 = {
            x: values,
            y: otuID,
            type: "bar",
            orientation: "h"
        };
 
-       var data = [trace];
+       var data = [trace1];
 
+       // Horizontal Bar Chart
        Plotly.newPlot("bar", data);
 
+       var trace2 = {
+           x: ids,
+           y: values,
+           text: labels,
+           mode: 'markers',
+           marker: {
+               size: [values],
+               color: [ids]
+           } 
+       };
+
+       var data1 = [trace2];
+
+       var layout2 = {
+           showlegend: false,
+           height: 600,
+           width: 600
+       };
+
+       // Bubble Chart
+       Plotly.newPlot("bubble", data1, layout2);
 
     });
-
-
 };
+
+function info() {
+    d3.json("samples.json").then((demo) => {
+        var meta  = demo.metadata[0]
+
+        meta.forEach(function(infoData) {
+            console.log(infoData);
+
+        })
+
+    })
+}
 
 init();

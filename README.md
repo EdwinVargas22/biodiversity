@@ -38,11 +38,22 @@ The dataset reveals that a small handful of microbial species (also called opera
 
 ## Step 3: Demographic Info
 
+1. Display the sample metadata, as an individual's demographic information.
 
+2. Display each key-value pair from the metadata JSON object somewhere on the page.
 
+![Demo](https://user-images.githubusercontent.com/60836219/103165028-8330a780-47c7-11eb-8758-8d959da94f54.PNG)
 
+## Step 4: Gauge Chart
 
+* Adapt the Gauge Chart from https://plot.ly/javascript/gauge-charts/ to plot the weekly washing frequency of the individual.
 
+* You will need to modify the example gauge code to account for values ranging from 0 through 9.
+
+* Update the chart whenever a new sample is selected.
 
 ![Gauge Chart](https://user-images.githubusercontent.com/60836219/103164719-b2451a00-47c3-11eb-96bf-a0c7f50fbaff.PNG)
-![Demo](https://user-images.githubusercontent.com/60836219/103164724-b8d39180-47c3-11eb-901a-1c623fefd493.PNG)
+
+### About the Data
+
+Hulcr, J. et al.(2012) A Jungle in There: Bacteria in Belly Buttons are Highly Diverse, but Predictable. Retrieved from: http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/
